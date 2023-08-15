@@ -1,6 +1,12 @@
 function calcularValor() {
     const metodoDePagamento = document.getElementById("metodoDePagamento").value;
     const itensInput = document.getElementById("itens").value;
+
+    if (!itensInput) {
+        document.getElementById("resultado").textContent = "Não há itens no carrinho de compra!";
+        return;
+    }
+
     const itensArray = itensInput.split(";").map(item => item.trim());
 
     const caixa = new CaixaDaLanchonete();
@@ -96,7 +102,7 @@ class CaixaDaLanchonete {
         }
 
         if (valorTotal === 0) {
-            return "Não há itens no carrinho de compra!";
+            return "Quantidade inválida!";
         }
 
         if (itensPrincipais.size === 0) {
