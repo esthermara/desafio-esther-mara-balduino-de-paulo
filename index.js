@@ -1,3 +1,4 @@
+import {CaixaDaLanchonete} from "./src/caixa-da-lanchonete"
 function calcularValor() {
     const metodoDePagamento = document.getElementById("metodoDePagamento").value;
     const itensInput = document.getElementById("itens").value;
