@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
+    margin: 10px 10px 10px 10px;
     padding: 0;
     background-color: #f7f7f7;
 }
@@ -31,6 +31,7 @@ h1, h2 {
 
 #lanchoneteForm {
     margin-bottom: 20px;
+    width: 98%;
 }
 
 label {
@@ -101,7 +102,14 @@ input[type="button"]:hover {
         <label for="itens">Itens (Código, Quantidade):</label><br>
         <input type="text" id="itens" name="itens" placeholder="Ex: cafe,1; chantily,1"><br><br>
     </form>
-
+    <label for="metodoDePagamento">Método de Pagamento:</label>
+        <select id="metodoDePagamento" name="metodoDePagamento">
+            <option value="">Escolha um método de pagamento</option>
+            <option value="debito">Débito</option>
+            <option value="credito">Crédito</option>
+            <option value="dinheiro">Dinheiro</option>
+        </select><br><br>
+    <input type="button" value="Calcular Valor" onclick="calcularValor()">
     <h2>Lista de Produtos:</h2>
     <table id="produtoTable">
         <thead>
@@ -116,15 +124,6 @@ input[type="button"]:hover {
 
     <h2>Resultado:</h2>
     <div id="resultado"></div><br /><br />
-    <label for="metodoDePagamento">Método de Pagamento:</label>
-        <select id="metodoDePagamento" name="metodoDePagamento">
-            <option value="">Escolha um método de pagamento</option>
-            <option value="debito">Débito</option>
-            <option value="credito">Crédito</option>
-            <option value="dinheiro">Dinheiro</option>
-        </select><br><br>
-        <input type="button" value="Calcular Valor" onclick="calcularValor()">
-
    <script src="index.js"></script>
 </body>
 </html>
