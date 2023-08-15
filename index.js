@@ -1,6 +1,6 @@
 function calcularValor() {
     const metodoDePagamento = document.getElementById("metodoDePagamento").value;
-    const itensInput = document.getElementById("itens").value;
+    const itensInput = document.getElementById("itens").value.trim();
 
     if (!itensInput) {
         document.getElementById("resultado").textContent = "Não há itens no carrinho de compra!";
